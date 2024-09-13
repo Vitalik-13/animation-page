@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Optima';
+    src: local('Optima Pro Roman'), local('Optima-Pro-Roman'),
+        url('OptimaLTPro-Roman.woff2') format('woff2'),
+        url('OptimaLTPro-Roman.woff') format('woff'),
+        url('OptimaLTPro-Roman.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

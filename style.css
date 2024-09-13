@@ -1,0 +1,270 @@
+@font-face {
+  font-family: "Optima";
+  src: url("./fonts/OptimaLTPro-Roman.woff2") format("woff2");
+  src: url("./fonts/OptimaLTPro-Roman.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  height: 0;
+  box-sizing: border-box;
+}
+.body {
+  overflow-x: hidden;
+  font-family: Optima;
+  background-color: #e5e1cf;
+}
+.section-one {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #e5e1cf;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-main-text {
+  position: absolute;
+  left: 3%;
+  top: 45%;
+  max-width: 880px;
+}
+.left-main-text p {
+  margin-bottom: 50px;
+}
+.left-main-text h1 {
+  font-size: 5em;
+  font-weight: 200;
+}
+.right-main-text {
+  font-size: 18px;
+  max-width: 400px;
+  position: absolute;
+  right: 3%;
+  bottom: 10%;
+}
+/* Section-two ========================================================================================*/
+.section-two {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.text-foto-container {
+  display: flex;
+  position: relative;
+}
+.logo-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 180px 0;
+  justify-content: center;
+  color: #5c5a53;
+  z-index: 2;
+  opacity: 1;
+}
+.second-text-container {
+  opacity: 0;
+}
+.foto-container {
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+  height: 100vh;
+  overflow: hidden;
+}
+.foto-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  order: 2;
+  transition: all 0.8s ease;
+}
+.text {
+  max-width: 450px;
+}
+.text h3 {
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.text-button {
+  margin-top: -30px;
+  background-color: transparent;
+  padding: 15px 25px;
+  border: 1px solid #5c5a53;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #5c5a53;
+  cursor: pointer;
+}
+.end-paragraph {
+  padding-top: 30px;
+  max-width: 350px;
+  font-size: 14px;
+  text-align: center;
+}
+.many-small-foto {
+  width: 215px;
+  height: 305px;
+  position: absolute;
+  z-index: 3;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+
+  gap: 80% 0;
+  margin: 0 auto;
+}
+.img-animation {
+  width: 100%;
+  height: 100%;
+  transform: translateY(500%);
+}
+
+.second {
+  z-index: 2;
+  transform: translateY(150%);
+}
+
+/* section-three=================================================================================== */
+.section-three {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  color: #5c5a53;
+  z-index: 2;
+}
+.title-three-section {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 54px;
+  z-index: -1;
+}
+.threee-section-paragraph {
+  max-width: 350px;
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  font-size: 18px;
+  z-index: -1;
+}
+.img-three-section-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.img-three-section-wrapper img {
+  z-index: -2;
+}
+.second-images-animation {
+  min-width: 150px;
+  min-height: 150px;
+}
+.small-img-container {
+  position: absolute;
+  object-fit: cover;
+}
+.one {
+  left: 40%;
+  top: 30%;
+}
+.two {
+  left: 10%;
+  bottom: 30%;
+}
+.three {
+  bottom: 20%;
+  right: 10%;
+}
+.top {
+  position: absolute;
+  right: 60%;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  object-fit: cover;
+}
+.fife {
+  left: 50%;
+  bottom: -50%;
+}
+.six {
+  right: 10%;
+  bottom: -75%;
+}
+.seven {
+  left: 10%;
+  bottom: -95%;
+}
+.seven img {
+  width: 300px;
+  height: 400px;
+}
+
+/* last-section========================================================================================= */
+.last-section {
+  position: relative;
+  width: 100vw;
+  height: 170vh;
+  transform-origin: center; /* Масштабування з центру */
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Плавність анімації */
+  z-index: 5;
+  color: wheat;
+}
+.last-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Щоб зображення заповнювало весь блок */
+  position: absolute; /* Для правильного масштабування */
+  top: 0;
+  left: 0;
+  /* z-index: 15 !important; */
+}
+.animation-title {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  font-size: 46px;
+  font-weight: 600;
+}
+.animation-paragraph {
+  position: fixed;
+  left: 15%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  max-width: 350px;
+  z-index: 6;
+}

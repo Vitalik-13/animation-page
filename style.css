@@ -248,10 +248,9 @@
   position: absolute; /* Для правильного масштабування */
   top: 0;
   left: 0;
-  /* z-index: 15 !important; */
 }
 .animation-title {
-  position: fixed;
+  position: absolute;
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
@@ -260,7 +259,7 @@
   font-weight: 600;
 }
 .animation-paragraph {
-  position: fixed;
+  position: absolute;
   left: 15%;
   bottom: 50%;
   transform: translateY(-50%);

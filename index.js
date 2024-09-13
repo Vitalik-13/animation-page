@@ -109,18 +109,19 @@ gsap.utils.toArray(".second-images-animation").forEach((img) => {
   });
 });
 
-gsap.fromTo(
-  ".last-section",
-  { scale: 0 }, // Початковий стан: зменшена
-  {
-    scale: 1.4, // Кінцевий стан: повний розмір
-
-    scrollTrigger: {
-      trigger: ".last-section", // Триггер для анімації
-      start: "top bottom", // Початок анімації, коли верх секції досягає нижньої частини viewport
-      end: "bottom top", // Кінець анімації, коли низ секції досягає верхньої частини viewport
-      scrub: 1, // Плавна анімація при скролі
-      toggleActions: "play reverse play reverse", // Грає при вході, зворотній програванні при виході
-    },
-  }
-);
+window.addEventListener("load", () => {
+  gsap.fromTo(
+    ".last-section",
+    { scale: 0 }, // Початковий стан: зменшена
+    {
+      scale: 1.4, // Кінцевий стан: повний розмір
+      scrollTrigger: {
+        trigger: ".last-section", // Триггер для анімації
+        start: "top bottom", // Початок анімації
+        end: "bottom top", // Кінець анімації
+        scrub: 1, // Плавна анімація при скролі
+        toggleActions: "play reverse play reverse", // Грає при вході та виході
+      },
+    }
+  );
+});

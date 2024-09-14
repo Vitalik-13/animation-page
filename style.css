@@ -343,6 +343,9 @@
   .last-section img {
     display: none;
   }
+  .mobile-wrapper {
+    display: block;
+  }
   .left-main-text h1 {
     font-size: 38px;
   }
@@ -361,7 +364,7 @@
   }
 
   .small-mobile-bitton {
-    margin-top: 180px;
+    margin-top: 200px;
     background-color: transparent;
     padding: 15px 25px;
     padding-bottom: 30px;
@@ -462,6 +465,7 @@
     margin-bottom: 150px;
     font-size: 38px;
     font-weight: 600;
+    z-index: 6;
   }
   .last-img-container {
     position: relative;
@@ -471,7 +475,7 @@
   }
   .last-img {
     width: 100vw;
-    height: 100vh;
+    height: 115vh;
     margin-top: 100px;
     object-fit: cover;
     overflow: hidden;
@@ -493,7 +497,7 @@
     z-index: 2;
     left: 5%;
     font-size: 24px;
-    bottom: -70px;
+    bottom: -50px;
   }
   .small-last-paragraph {
     text-align: left;
@@ -502,14 +506,14 @@
     z-index: 2;
     left: 5%;
     font-size: 20px;
-    bottom: -170px;
+    bottom: -140px;
   }
   .last-mobile-button {
     position: absolute;
     z-index: 2;
     left: 5%;
     font-size: 20px;
-    bottom: -290px;
+    bottom: -260px;
     color: rgb(247, 223, 199);
     border: 1px solid rgb(247, 223, 199);
     font-size: 18px;
@@ -517,6 +521,5 @@
   .finnaly-foto {
     width: 100vw;
     height: 120vh;
-    overflow: hidden;
   }
 }

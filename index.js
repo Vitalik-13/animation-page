@@ -151,10 +151,10 @@ window.addEventListener("load", () => {
 });
 
 tl.to(".last-small-mobile-img", {
-  y: -50,
+  y: -80,
   scrollTrigger: {
     trigger: ".last-small-mobile-img",
     start: "start center",
-    scrub: 6,
+    scrub: 8,
   },
 });

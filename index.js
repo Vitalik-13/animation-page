@@ -35,7 +35,7 @@ tl.to(".last-scale", {
   },
 });
 tl.to(".last-img", {
-  scale: 1.7,
+  scale: 1.4,
   scrollTrigger: {
     trigger: ".last-img",
     start: "start center",
@@ -148,4 +148,13 @@ window.addEventListener("load", () => {
       },
     }
   );
+});
+
+tl.to(".last-small-mobile-img", {
+  y: -50,
+  scrollTrigger: {
+    trigger: ".last-small-mobile-img",
+    start: "start center",
+    scrub: 6,
+  },
 });

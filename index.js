@@ -18,6 +18,22 @@ tl.to(".img-scrool", {
     scrub: 7,
   },
 });
+tl.to(".scale", {
+  scale: 1.7,
+  scrollTrigger: {
+    trigger: ".scale",
+    start: "start center",
+    scrub: 4,
+  },
+});
+tl.to(".last-scale", {
+  scale: 1.7,
+  scrollTrigger: {
+    trigger: ".last-scale",
+    start: "start center",
+    scrub: 4,
+  },
+});
 // Створюємо ScrollTrigger для фіксації секції
 ScrollTrigger.create({
   trigger: ".section-two",
@@ -125,8 +141,3 @@ window.addEventListener("load", () => {
     }
   );
 });
-///========================================================================================
-///========================================================================================
-///========================================================================================
-// Використовуємо gsap.matchMedia для медіа-запитів
-//

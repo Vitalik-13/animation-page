@@ -125,3 +125,89 @@ window.addEventListener("load", () => {
     }
   );
 });
+///========================================================================================
+///========================================================================================
+///========================================================================================
+// Використовуємо gsap.matchMedia для медіа-запитів
+let mm = gsap.matchMedia();
+
+// Визначаємо налаштування для екранів більше 600px
+mm.add("(min-width: 600px)", () => {
+  // Створюємо ScrollTrigger для фіксації секції
+  ScrollTrigger.create({
+    trigger: ".section-two",
+    start: "top end",
+    end: () => "+=" + document.querySelector(".many-small-foto").scrollHeight,
+    pin: true,
+    scrub: 25, // Синхронізує скролл з анімацією
+  });
+
+  // Анімація прокручування фото в блоці many-small-foto
+  gsap.to(".img-animation", {
+    y: 0,
+    stagger: 1.8, // Затримка між анімацією кожного зображення
+    scrollTrigger: {
+      trigger: ".section-two",
+      repeatRefresh: true,
+      start: "top top",
+      end: "+=5500", // Встановлюємо end на 5500, щоб відповідати часом фіксації секції
+      scrub: 25, // Той же scrub для синхронізації
+    },
+  });
+
+  // Анімація для ".second" з такою ж швидкістю та чутливістю до скролу
+  gsap.to(".second", {
+    scale: 1.5,
+    y: 0,
+    scrollTrigger: {
+      trigger: ".img-animation",
+      start: "center center",
+      end: "+=500", // Встановлюємо end
+      scrub: 15, // Той же scrub для синхронізації
+    },
+  });
+
+  // Анімація для ".text-container" та ".second-text-container"
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".img-animation",
+        start: "top center", // Початок анімації, коли секція досягає середини вікна
+        end: "bottom center", // Кінець анімації, коли секція досягає низу вікна
+        scrub: 3, // Плавність переходу
+      },
+    })
+    .to(
+      ".text-container",
+      {
+        opacity: 0, // Зменшення непрозорості першого блоку
+        filter: "blur(20px)", // Додавання розмитості
+        duration: 1.5, // Тривалість переходу
+        ease: "power1.out", // Плавний вихід
+      },
+      0
+    )
+    .to(
+      ".second-text-container",
+      {
+        opacity: 1, // Поява другого блоку
+        filter: "blur(0px)", // Забираємо розмитість
+        duration: 1.5, // Тривалість появи
+        ease: "power1.in", // Плавний вхід
+      },
+      0 // Накладання анімацій: другий блок починає з'являтися ще до того, як перший повністю зник
+    );
+});
+
+// Додаємо умову для екранів менших за 600px, де вимикаємо всі анімації
+mm.add("(max-width: 599px)", () => {
+  // Тут не виконується жодна анімація
+  console.log("Анімації вимкнені для екранів менших за 600px");
+});
+ScrollTrigger.create({
+  trigger: ".section-two",
+  start: "top end",
+  end: () => "+=" + document.querySelector(".many-small-foto").scrollHeight, // Встановлюємо динамічний кінець
+  pin: true,
+  scrub: 25, // Плавне скролювання та синхронізація
+});

@@ -74,7 +74,7 @@ gsap.to(
       trigger: ".img-animation",
       start: "center center",
       end: "+=500", // Встановлюємо end на 5500, щоб відповідати часом фіксації секції
-      scrub: 15, // Той же scrub для синхронізації
+      scrub: 10, // Той же scrub для синхронізації
     },
   },
   1

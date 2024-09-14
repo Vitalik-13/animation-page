@@ -34,6 +34,14 @@ tl.to(".last-scale", {
     scrub: 4,
   },
 });
+tl.to(".last-img", {
+  scale: 1.7,
+  scrollTrigger: {
+    trigger: ".last-img",
+    start: "start center",
+    scrub: 4,
+  },
+});
 // Створюємо ScrollTrigger для фіксації секції
 ScrollTrigger.create({
   trigger: ".section-two",
